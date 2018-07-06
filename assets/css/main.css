@@ -1,6 +1,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   background: #F9F7F8;
+  overflow: hidden;
 }
 .sec-grey {
   background: #eee;
@@ -336,8 +337,8 @@ a:hover {
   text-align: center;
 }
 .download_section .op_site .sgst_btn .button {
-  padding: 40px 70px !important;
-  font-size: 20px !important;
+  padding: 40px 70px;
+  font-size: 20px;
   font-weight: 600;
   text-transform: uppercase;
   border-radius: 40px;
@@ -437,8 +438,143 @@ a:hover {
   background: #fff;
   margin-bottom: 20px;
 }
+.foot {
+  width: 100%;
+  background: #fff;
+  padding-bottom: 60px;
+}
+.foot .foot-in {
+  width: 85%;
+  margin: 0 auto;
+}
+.foot .foot-in i {
+  font-size: 25px;
+  margin-top: 15px;
+  margin-right: 5px;
+}
+.foot .foot-in img {
+  height: 50px;
+}
+.foot .foot-in sub {
+  font-weight: bold;
+}
+.foot .foot-in .is-active {
+  color: #16edc4;
+}
+.foot .foot-in .is-active a {
+  color: #16edc4;
+}
+.foot .foot-in ul,
+.foot .foot-in h5 {
+  padding-top: 30px;
+  list-style: inherit;
+  font-weight: bold;
+}
+.foot .foot-in ul a,
+.foot .foot-in h5 a {
+  color: #111;
+  font-size: 14px;
+  font-weight: bold;
+}
 @media screen and (max-width: 1088px) {
   .tabs ul {
     display: inline-block;
+  }
+}
+@media screen and (max-width: 768px) {
+  .tag-section,
+  .tag-section2 {
+    padding: 20px;
+  }
+  .src-box {
+    padding: 10px !important;
+  }
+  .src-box input[type="text"] {
+    font-size: 14px;
+  }
+  .src-box .dlt {
+    right: 10px;
+    top: 10px;
+    font-size: 18px;
+  }
+  .hero {
+    padding-left: 20px !important;
+    padding: 20px;
+    padding-top: 20px !important;
+  }
+  .hero h1 {
+    font-size: 30px !important;
+    color: #fff;
+    padding-bottom: 10px !important;
+  }
+  .hero .dnld-btn {
+    display: block !important;
+  }
+  .hero .dnld-btn .abtn,
+  .hero .dnld-btn .gbtn {
+    margin-bottom: 15px !important;
+    width: 100% !important;
+    display: block;
+    width: 240px;
+    padding: 7px 15px;
+    text-align: center;
+  }
+  .hero .dnld-btn .abtn img,
+  .hero .dnld-btn .gbtn img {
+    width: 40px;
+    float: left;
+    margin-right: 10px;
+  }
+  .hero .dnld-btn .abtn h4,
+  .hero .dnld-btn .gbtn h4 {
+    color: #fff;
+  }
+  .hero .dnld-btn .abtn span,
+  .hero .dnld-btn .gbtn span {
+    color: #fff;
+    font-size: 14px;
+  }
+  .op_site {
+    padding-left: 15px !important;
+    padding-right: 15px !important;
+  }
+  .op_site .padder-right {
+    padding-right: 15px !important;
+  }
+  .op_site .faq-btn1,
+  .op_site .faq-btn2,
+  .op_site .faq-btn3,
+  .op_site .faq-btn4,
+  .op_site .faq-btn5,
+  .op_site .faq-btn6,
+  .op_site .faq-btn7,
+  .op_site .faq-btn8,
+  .op_site .faq-btn9,
+  .op_site .faq-btn10 {
+    padding-right: 25px !important;
+  }
+  .op_site .tgl-btn {
+    right: 10px !important;
+  }
+  .op_site .sgst_btn {
+    text-align: center;
+    font-size: 12px !important;
+  }
+  .op_site .sgst_btn .button {
+    font-size: 12px !important;
+    padding: 20px 0px !important;
+    width: 100%;
+    margin-top: 10px !important;
+  }
+  .foot .foot-in {
+    text-align: center;
+  }
+  .foot .foot-in ul {
+    padding-top: 0px;
+    margin-top: 0px;
+    list-style: none;
+  }
+  .foot .foot-in h5 {
+    padding-top: 0px;
   }
 }
