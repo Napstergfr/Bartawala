@@ -4,7 +4,7 @@
 	<meta charset="utf-8">
 	<title>Bartawala</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"> 
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous">
 	<!--Fontawesome Css-->
@@ -24,11 +24,11 @@
                 <img src="assets/img/logo.png" alt="Logo">
             </a>
              <!--Navbar brand logo-->
-            <span class="navbar-burger burger" data-target="navbarMenu">	        
-                <span></span>
-                <span></span>
-                <span></span>
-            </span>
+						 <span class="navbar-burger burger is-hidden-desktop" data-target="navbarMenu">
+								 <span></span>
+								 <span></span>
+								 <span></span>
+						 </span>
             <!--toggle hamburger-->
         </div>
         <!--Navbar brand-->
@@ -36,17 +36,30 @@
             <div class="navbar-end">
                 <div class="tabs is-right">
                     <ul>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Become a professional</a></li>
-                        <li><a href="">Login / Signup</a></li>
+                        <li class="is-hidden-desktop"><a href="">Blog</a></li>
+                        <li class="is-hidden-desktop"><a href="">Become a professional</a></li>
+                        <li><a href="" class="login">Login&nbsp;</a><a href="#">/&nbsp;Signup</a></li>
                         <li>
                         	<a href="">
                         	<i class="far fa-bell button1 badge" data-badge="10"></i>
-                        		
                         	</a>
                         </li>
                     </ul>
                 </div>
+								<div role="navigation">
+								  <div id="menuToggle" class="is-hidden-touch">
+								    <input type="checkbox" />
+								    <span></span>
+								    <span></span>
+								    <span></span>
+								    <ul id="menu">
+								      <a href="#"><li>Blog</li></a>
+								      <a href="#"><li>Become a professional</li></a>
+								      <a href="#"><li>Info</li></a>
+								      <a href="#"><li>Contact</li></a>
+								    </ul>
+								  </div>
+								</div>
             </div>
         </div>
     </div>
@@ -237,7 +250,7 @@
 
 
 
-		
+
 	</div>	<div class="columns">
 		<div class="column">
 			<div class="card">
@@ -374,7 +387,7 @@
 
 
 
-		
+
 	</div>
 	<br>
 </div>
@@ -523,7 +536,7 @@
 
 
 
-		
+
 	</div>	<div class="columns">
 		<div class="column">
 			<div class="card">
@@ -656,7 +669,7 @@
 
 			</div>
 		</div>
-		
+
 	</div>
 </div>
 <br>
@@ -693,11 +706,11 @@
 		</div>
 			</div>
 		</div>
-	
+
 		<div class="op_site">
 			<h2 class="title is-3">Operate Our Websites</h2>
 			<div class="columns">
-				
+
 			<div class="column padder-right">
 				<div class="faq-btn1">
 					<h6 class="ttle1">Lorem ipsum dolor sit amet, adipisicing elit. Corporis facere veritatis inventore tempore?</h6>
@@ -716,7 +729,7 @@
 				</div> <br>
 		        <div id="ans2">Under normal circumstances you will need to sell at a discount to the price originally paid, however there may be cases when you can get paid more than the original price of the ticket. We will try to get you the maximum possible value. Don’t worry, we’ve got your back.
 		        </div>
-				
+
 
 				 <div class="faq-btn3">
 					<h6 class="ttle3">Lorem ipsum dolor sit amet, adipisicing elit. Corporis facere veritatis inventore tempore?</h6>
@@ -746,15 +759,15 @@
 		        <div id="ans5">Under normal circumstances you will need to sell at a discount to the price originally paid, however there may be cases when you can get paid more than the original price of the ticket. We will try to get you the maximum possible value. Don’t worry, we’ve got your back.
 		        </div>
 
-		       
 
 
-		      
+
+
 
 			 </div>
-				
 
-			
+
+
 			<div class="column padder-right">
 				<div class="faq-btn6">
 					<h6 class="ttle6">Lorem ipsum dolor sit amet, adipisicing elit. Corporis facere veritatis inventore tempore?</h6>
@@ -773,7 +786,7 @@
 				</div> <br>
 		        <div id="ans7">Under normal circumstances you will need to sell at a discount to the price originally paid, however there may be cases when you can get paid more than the original price of the ticket. We will try to get you the maximum possible value. Don’t worry, we’ve got your back.
 		        </div>
-				
+
 
 				 <div class="faq-btn8">
 					<h6 class="ttle8">Lorem ipsum dolor sit amet, adipisicing elit. Corporis facere veritatis inventore tempore?</h6>
@@ -803,14 +816,14 @@
 		        <div id="ans10">Under normal circumstances you will need to sell at a discount to the price originally paid, however there may be cases when you can get paid more than the original price of the ticket. We will try to get you the maximum possible value. Don’t worry, we’ve got your back.
 		        </div>
 
-		       
 
 
-		      
+
+
 
 			 </div>
 
-			
+
 			</div>
 			<div class="columns">
 					<div class="column sgst_btn">
@@ -837,7 +850,7 @@
 						<li><a href="">Support</a></li>
 					</ul>
 				</div>
-				<div class="column">
+				<div class="column is-2">
 					<ul>
 						<li><a href="">Our Feed</a></li>
 						<li><a href="">Terms and Conditions</a></li>
@@ -865,4 +878,3 @@
 <script type="text/javascript" src="assets/js/main.js"></script>
 </body>
 </html>
-

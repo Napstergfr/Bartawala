@@ -1,11 +1,8 @@
-(function() {
-    var burger = document.querySelector('.burger');
-    var menu = document.querySelector('#'+burger.dataset.target);
-    burger.addEventListener('click', function() {
-        burger.classList.toggle('is-active');
-        menu.classList.toggle('is-active');
-    });
-})();
+
+$('.burger').click(function () {
+    $(this).toggleClass('is-active');
+    $('#navbarMenu').toggleClass('is-active');
+});
 $("#ans1").hide();
 $("#ans2").hide();
 $("#ans3").hide();
@@ -52,7 +49,7 @@ $(".minus10").hide();
         $(".plus4").toggle();
         $(".minus4").toggle();
         $(".ttle4, .minus4").toggleClass('active');
-    }); 
+    });
 
      $(".faq-btn5").click(function(){
         $("#ans5").slideToggle();
@@ -91,4 +88,3 @@ $(".minus10").hide();
         $(".minus10").toggle();
         $(".ttle10, .minus10").toggleClass('active');
     });
-
