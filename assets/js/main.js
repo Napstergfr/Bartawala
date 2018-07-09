@@ -1,8 +1,9 @@
-
+//for the hamburger
 $('.burger').click(function () {
     $(this).toggleClass('is-active');
     $('#navbarMenu').toggleClass('is-active');
 });
+//for the Operate Our Websites toggles
 $("#ans1").hide();
 $("#ans2").hide();
 $("#ans3").hide();
@@ -29,35 +30,30 @@ $(".minus10").hide();
         $(".minus1").toggle();
         $(".ttle1, .minus1").toggleClass('active');
     });
-
     $(".faq-btn2").click(function(){
         $("#ans2").slideToggle();
         $(".plus2").toggle();
         $(".minus2").toggle();
         $(".ttle2, .minus2").toggleClass('active');
     });
-
     $(".faq-btn3").click(function(){
         $("#ans3").slideToggle();
         $(".plus3").toggle();
         $(".minus3").toggle();
         $(".ttle3, .minus3").toggleClass('active');
     });
-
      $(".faq-btn4").click(function(){
         $("#ans4").slideToggle();
         $(".plus4").toggle();
         $(".minus4").toggle();
         $(".ttle4, .minus4").toggleClass('active');
     });
-
      $(".faq-btn5").click(function(){
         $("#ans5").slideToggle();
         $(".plus5").toggle();
         $(".minus5").toggle();
         $(".ttle5, .minus5").toggleClass('active');
     });
-
      $(".faq-btn6").click(function(){
         $("#ans6").slideToggle();
         $(".plus6").toggle();
@@ -76,13 +72,13 @@ $(".minus10").hide();
         $(".minus8").toggle();
         $(".ttle8, .minus8").toggleClass('active');
     });
-          $(".faq-btn9").click(function(){
+        $(".faq-btn9").click(function(){
         $("#ans9").slideToggle();
         $(".plus9").toggle();
         $(".minus9").toggle();
         $(".ttle9, .minus9").toggleClass('active');
     });
-            $(".faq-btn10").click(function(){
+        $(".faq-btn10").click(function(){
         $("#ans10").slideToggle();
         $(".plus10").toggle();
         $(".minus10").toggle();

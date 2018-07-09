@@ -6,7 +6,22 @@ body {
 .sec-grey {
   background: #eee;
 }
-#menuToggle {
+.navbar {
+  background: #fff;
+  -webkit-box-shadow: -1px 4px 52px 0px rgba(189, 185, 189, 0.1);
+  -moz-box-shadow: -1px 4px 52px 0px rgba(189, 185, 189, 0.1);
+  box-shadow: -1px 4px 52px 0px rgba(189, 185, 189, 0.1);
+  position: relative;
+  z-index: 2;
+}
+.navbar .login {
+  color: #08C5FF;
+  padding-right: 0px;
+}
+.navbar .navbar-brand .navbar-item img {
+  max-height: 100px;
+}
+.navbar #menuToggle {
   display: block;
   position: relative;
   top: 0px;
@@ -17,7 +32,7 @@ body {
   -webkit-user-select: none;
   user-select: none;
 }
-#menuToggle input {
+.navbar #menuToggle input {
   display: block;
   width: 100%;
   height: 100%;
@@ -29,7 +44,7 @@ body {
   z-index: 2;
   -webkit-touch-callout: none;
 }
-#menuToggle span {
+.navbar #menuToggle span {
   display: block;
   width: 33px;
   height: 6px;
@@ -41,25 +56,25 @@ body {
   transform-origin: -2px 0px;
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1), opacity 0.55s ease;
 }
-#menuToggle span:first-child {
+.navbar #menuToggle span:first-child {
   transform-origin: 0% 0%;
 }
-#menuToggle span:nth-last-child(2) {
+.navbar #menuToggle span:nth-last-child(2) {
   transform-origin: 0% 100%;
 }
-#menuToggle input:checked ~ span {
+.navbar #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #232323;
 }
-#menuToggle input:checked ~ span:nth-last-child(3) {
+.navbar #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
-#menuToggle input:checked ~ span:nth-last-child(2) {
+.navbar #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
-#menu {
+.navbar #menu {
   position: absolute;
   right: 0px;
   top: 80px;
@@ -76,38 +91,23 @@ body {
   -moz-box-shadow: -1px 56px 160px 29px rgba(189, 185, 189, 0.27);
   box-shadow: -1px 56px 160px 29px rgba(189, 185, 189, 0.27);
 }
-#menu a {
+.navbar #menu a {
   color: #B2B0B1;
   font-size: 18px;
 }
-#menu a:hover {
+.navbar #menu a:hover {
   color: #0BC6FE;
 }
-#menu li {
+.navbar #menu li {
   padding: 5px 0;
   text-align: center;
 }
-#menuToggle input:checked ~ ul {
+.navbar #menuToggle input:checked ~ ul {
   transform: none;
   visibility: visible;
 }
-.tabs:not(:last-child) {
+.navbar .tabs:not(:last-child) {
   margin-bottom: 0px;
-}
-.navbar {
-  background: #fff;
-  -webkit-box-shadow: -1px 4px 52px 0px rgba(189, 185, 189, 0.1);
-  -moz-box-shadow: -1px 4px 52px 0px rgba(189, 185, 189, 0.1);
-  box-shadow: -1px 4px 52px 0px rgba(189, 185, 189, 0.1);
-  position: relative;
-  z-index: 2;
-}
-.navbar .login {
-  color: #08C5FF;
-  padding-right: 0px;
-}
-.navbar .navbar-brand .navbar-item img {
-  max-height: 100px;
 }
 .navbar .burger {
   display: block;
@@ -171,11 +171,6 @@ body {
   font-size: 18px;
   float: left;
   padding-left: 0px;
-}
-@media (max-width: 768px) {
-  .navbar .tabs ul a {
-    float: none;
-  }
 }
 .navbar .button1 {
   background: #fff;
@@ -420,7 +415,6 @@ a:hover {
   width: 220px;
   padding: 7px 15px;
   margin-bottom: 80px;
-  /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#292929+0,292929+51,6b6b6b+52,2e2e2e+100 */
   background: #292929;
   /* Old browsers */
   background: -moz-linear-gradient(45deg, #292929 0%, #292929 51%, #6b6b6b 52%, #2e2e2e 100%);
