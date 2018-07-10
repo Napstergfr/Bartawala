@@ -95,7 +95,6 @@ body {
   -webkit-box-shadow: -1px 56px 160px 29px rgba(189, 185, 189, 0.27);
   -moz-box-shadow: -1px 56px 160px 29px rgba(189, 185, 189, 0.27);
   box-shadow: -1px 56px 160px 29px rgba(189, 185, 189, 0.27);
-  z-index: 1;
 }
 .navbar #menu a {
   color: #B2B0B1;
@@ -265,7 +264,11 @@ a:hover {
 }
 .card-section .card .card-image {
   position: relative;
+  z-index: 0 !important;
   cursor: pointer;
+}
+.card-section .card .card-image:hover .h-now {
+  color: #16edc4 !important;
 }
 .card-section .card .card-image:hover .hover-box {
   display: block;
@@ -277,7 +280,7 @@ a:hover {
 .card-section .card .h-now {
   background: #fff;
   position: absolute;
-  z-index: 1;
+  z-index: 2;
   top: 0px;
   right: 20px;
   padding: 20px 12px 10px 12px;
