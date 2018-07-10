@@ -1,7 +1,6 @@
 //for the hamburger
-$('.burger').click(function () {
-    $(this).toggleClass('is-active');
-    $('#navbarMenu').toggleClass('is-active');
+$('#menuToggle').click(function() {
+  $(this).toggleClass('active');
 });
 //for the Operate Our Websites toggles
 $("#ans1").hide();
