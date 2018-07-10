@@ -3,7 +3,7 @@ body {
   background: #F9F7F8;
   overflow: hidden;
 }
-.active {
+.active_nav {
   position: fixed !important;
   right: 120px;
 }

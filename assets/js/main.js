@@ -1,6 +1,6 @@
 //for the hamburger
 $('#menuToggle').click(function() {
-  $(this).toggleClass('active');
+  $(this).toggleClass('active_nav');
 });
 //for the Operate Our Websites toggles
 $("#ans1").hide();

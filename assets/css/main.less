@@ -1,0 +1,726 @@
+@is_primary: #16EDC4;
+@txt_grey:#B1AFB0;
+body{
+	font-family: 'Open Sans', sans-serif;
+	background: #F9F7F8;
+	overflow: hidden;
+}
+.active_nav{
+	position: fixed !important;
+	right: 120px;
+}
+.sec-grey{
+	background: #eee;
+}
+//Navbar starts here!!!!!!!!!!!!
+.navbar{
+	background: #fff;
+	-webkit-box-shadow: -1px 4px 52px 0px rgba(189,185,189,0.1);
+-moz-box-shadow: -1px 4px 52px 0px rgba(189,185,189,0.1);
+box-shadow: -1px 4px 52px 0px rgba(189,185,189,0.1);
+	position: relative;
+	z-index: 2;
+	.login{
+		color: #08C5FF;
+		padding-right: 0px;
+	}
+	.navbar-brand{
+		.navbar-item{
+			img{
+				max-height: 100px;
+			}
+		}
+	}
+	//Hamburger for desktop view starts here
+	#menuToggle
+	{
+	  display: block;
+	  position: relative;
+	  top: 0px;
+	 	margin-left: 20px;
+		padding: 24px 20px;
+	 	background: #F6F4F5;
+	  -webkit-user-select: none;
+	  user-select: none;
+	}
+	#menuToggle input
+	{
+	  display: block;
+	  width: 100%;
+	  height: 100%;
+	  position: absolute;
+	  top: -7px;
+	  left: -5px;
+	  cursor: pointer;
+	  opacity: 0;
+	  z-index: 3 !important;
+	  -webkit-touch-callout: none;
+	}
+	#menuToggle span
+	{
+		z-index: 2 !important;
+	  display: block;
+	  width: 33px;
+	  height: 6px;
+	  margin-bottom: 5px;
+	  position: relative;
+	  background: #cdcdcd;
+	  border-radius: 3px;
+	  z-index: 1;
+	  transform-origin: -2px 0px;
+	  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+	              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+	              opacity 0.55s ease;
+	}
+	#menuToggle span:first-child
+	{
+	  transform-origin: 0% 0%;
+	}
+
+	#menuToggle span:nth-last-child(2)
+	{
+	  transform-origin: 0% 100%;
+	}
+
+	#menuToggle input:checked ~ span
+	{
+	  opacity: 1;
+	  transform: rotate(45deg) translate(-2px, -1px);
+	  background: #232323;
+	}
+
+	#menuToggle input:checked ~ span:nth-last-child(3)
+	{
+	  opacity: 0;
+	  transform: rotate(0deg) scale(0.2, 0.2);
+	}
+	#menuToggle input:checked ~ span:nth-last-child(2)
+	{
+	  transform: rotate(-45deg) translate(0, -1px);
+	}
+
+	#menu
+	{
+	  position: fixed;
+		right: 0px;
+		top: 0;
+	  width: 320px;
+	  padding: 20px;
+		padding-top:80px;
+		height:100vh !important;
+		background: #fff;
+	  list-style-type: none;
+	  -webkit-font-smoothing: antialiased;
+	  transform-origin: 0% 0%;
+	  transform: translate(400%, 0);
+	  transition: transform 0.1s cubic-bezier(0.77,0.2,0.05,1.0);
+		-webkit-box-shadow: -1px 56px 160px 29px rgba(189,185,189,0.27);
+	-moz-box-shadow: -1px 56px 160px 29px rgba(189,185,189,0.27);
+	box-shadow: -1px 56px 160px 29px rgba(189,185,189,0.27);
+	z-index:1;
+	a{
+		color: #B2B0B1;
+		font-size: 18px;
+		&:hover{
+			color: #0BC6FE;
+		}
+	}
+	}
+	#menu li
+	{
+	  padding: 5px 0;
+		text-align: center;
+	}
+	#menuToggle input:checked ~  ul
+	{
+	  transform: none;
+		visibility: visible;
+	}
+
+	//Hamburger for desktop view ends here
+	.tabs:not(:last-child){
+		margin-bottom: 0px;
+	}
+		//Hamburger for mobile view starts here
+	.burger{
+		display: block;
+		right: 0px;
+		background: #FAF8FA;
+		width: 70px;
+		height: 80px;
+	}
+	.tabs{
+		overflow: hidden;
+		ul{
+			border: none;
+			padding-top: 15px;
+			margin-right:10px;
+			a{
+				border: none;
+				font-size:18px;
+				float:left;
+				padding-left:0px;
+			}
+		}
+	}
+		//Hamburger for mobile view ends here
+	.bdge1{
+		background: #fff;
+		outline: none;
+		border: none;
+		font-size:20px;
+		padding-right: 0px;
+		color:#D5D5D5;
+		&:active{
+			outline: none;
+		}
+	}
+	//notification badge custom cSS
+	.badge:not([data-badge=""])::after {
+	    font-size: .70rem;
+	    line-height: .5rem;
+	}
+	.badge[data-badge]::after {
+	    top: calc(-10px - (1rem / 1));
+	    left: calc(100% - (1rem / 2));
+	    min-height: 1rem;
+	    min-width: 1rem;
+	}
+	.badge:not([data-badge=""])::after {
+	    padding: .3rem .2rem;
+	    text-align: center;
+	    white-space: nowrap;
+	}
+	.badge[data-badge]::after {
+	    position: absolute;
+	    left: 100%;
+	    margin: 0;
+	    border: .5px solid #4AD4FB;
+	    background: #fff;
+	    background-clip: padding-box;
+	    border-radius: 1rem;
+	    color: #4AD4FB;
+	    content: attr(data-badge);
+	    display: inline-block;
+	}
+	//notification badge custom cSS ends
+}
+//Navbar ends here!!!!!!!!!!!!
+//search box starts here
+.src-box{
+	background: #FFFFFF;
+	-webkit-box-shadow: -4px 17px 60px 1px rgba(222,222,222,1);
+	-moz-box-shadow: -4px 17px 60px 1px rgba(222,222,222,1);
+	box-shadow: -4px 17px 60px 1px rgba(222,222,222,1);
+	width: 100%;
+	margin-top: 25px;
+	z-index: 1;
+	position: relative;
+	padding: 50px 100px;
+	padding-bottom: 40px;
+	input[type="text"]{
+		width: 100%;
+		border:none;
+		border-bottom: 1px solid #B9B9B9;
+		font-size: 36px;
+		padding-bottom: 15px;
+		font-weight: 600;
+		&:focus{
+			outline: none;
+		}
+
+	}
+	::placeholder {
+	    color: @txt_grey !important;
+
+	}
+
+	:-ms-input-placeholder {
+	    color: @txt_grey !important;
+	}
+
+	::-ms-input-placeholder {
+	   color: @txt_grey !important;
+	}
+	.dlt{
+		position: absolute;
+		right: 100px;
+		top: 20px;
+		font-size: 25px;
+		cursor: pointer;
+
+	}
+}
+//search box ends here
+a{
+	&:hover {text-decoration: none !important;}
+}
+.tag{
+	text-transform: uppercase;
+}
+.tag-capsule{
+		border-radius: 15px !important;
+		padding: 0px 15px !important;
+}
+.is-primary{
+	background: @is_primary !important;
+}
+.is-white{
+	background: #F9F7F8 !important;
+}
+.tag-section{
+	padding: 20px 50px;
+
+	.is-grey{
+		background: #EEEEEE !important;
+	}
+
+	h2{
+		color:@txt_grey !important;
+	}
+}
+//tag section ends here
+.tag-section2{
+	padding: 10px 40px;
+	border-bottom: 1px solid #EEEEEE;
+	border-top: 1px solid #EEEEEE;
+	.is-white{
+		color:#999 !important;
+	}
+}
+//tag section2 ends here
+//cards section starts here!!!!!!
+.card-section{
+	padding-top: 40px;
+	.card{
+		padding: 10px;
+		box-shadow: none;
+		padding-bottom: 30px;
+		position: relative;
+		width: 100%;
+		height: 100%;
+		background: #F9F7F8;
+		&:hover{
+			-webkit-box-shadow: 0px 6px 74px -13px rgba(0,0,0,0.24);
+-moz-box-shadow: 0px 6px 74px -13px rgba(0,0,0,0.24);
+box-shadow: 0px 6px 74px -13px rgba(0,0,0,0.24);
+		}.card-image{
+			position: relative;
+			cursor: pointer;
+			&:hover .hover-box{
+				display: block;
+				position: absolute;
+				z-index: 1 !important;
+				top: 0;
+				left: 0;
+			}
+		}
+		.h-now{
+			background: #fff;
+			position: absolute;
+			z-index: 1;
+			top: 0px;
+			right: 20px;
+			padding: 20px 12px 10px 12px;
+			line-height:16px;
+			text-transform: capitalize;
+			font-weight: bold;
+			i{
+				margin-bottom: 8px;
+			}
+		}
+		.card-content{
+			padding: 0px 8px;
+			word-wrap: break-word;
+			font-size: 14px;
+			h5{
+				font-size: 16px;
+				color:#999;
+				i{
+					font-size: 5px;
+					color:#666 !important;
+				}
+			}
+		}
+		h4{
+			text-align: center;
+			padding: 15px 0px;
+			display: block;
+			border-bottom: 1px solid #CCCCCC;
+		}
+		.tag{
+			margin-right: 4px;
+			padding: 0px 15px;
+			margin-bottom: 8px;
+		}
+	}
+	.hover-box{
+		width: 100%;
+		height: 100%;
+		background: @is_primary;
+		display: none;
+		text-align: center;
+		padding-top: 23%;
+		color:#fff;
+		text-transform: capitalize;
+		i{
+			font-size: 40px;
+		}
+	}
+}
+.suggestion{
+	background: #fff;
+	.card{
+		background: #fff;
+	}
+}
+//all cards ends here
+//Check out our official Smart APPS(Download section) section starts here
+.download_section{
+	width: 100%;
+	background: black;
+	background: url('../img/bg.png');
+	background-repeat: no-repeat;
+	background-size: 100% 550px;
+	margin-bottom: 100px;
+	.hero{
+		width: 100%;
+		padding-left: 120px;
+		padding-top: 100px;
+		display: flex;
+		.dnld-btn{
+			display: flex;
+			width: 100%;
+			//google play store button
+		.gbtn{
+			-webkit-box-shadow: 0px 0px 4px 0px rgba(255,255,255,1);
+			-moz-box-shadow: 0px 0px 4px 0px rgba(255,255,255,1);
+			box-shadow: 0px 0px 4px 0px rgba(255,255,255,1);
+			width: 240px;
+			padding: 7px 15px;
+			margin-bottom: 80px;
+			background: #000000;
+			border-radius: 8px;
+			margin-right: 20px;
+
+			img{
+				width: 42px;
+				float: left;
+				margin-right: 10px;
+
+			}
+			h4{
+				color:#fff;
+
+			}
+			span{
+				color:#fff;
+				font-size: 14px;
+			}
+
+		}
+		//apple store button
+		.abtn{
+			-webkit-box-shadow: 0px 0px 4px 0px rgba(255,255,255,1);
+			-moz-box-shadow: 0px 0px 4px 0px rgba(255,255,255,1);
+			box-shadow: 0px 0px 4px 0px rgba(255,255,255,1);
+			width: 220px;
+			padding: 7px 15px;
+			margin-bottom: 80px;
+			background: #292929; /* Old browsers */
+			background: -moz-linear-gradient(45deg, #292929 0%, #292929 51%, #6b6b6b 52%, #2e2e2e 100%); /* FF3.6-15 */
+			background: -webkit-linear-gradient(45deg, #292929 0%,#292929 51%,#6b6b6b 52%,#2e2e2e 100%); /* Chrome10-25,Safari5.1-6 */
+			background: linear-gradient(45deg, #292929 0%,#292929 51%,#6b6b6b 52%,#2e2e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#292929', endColorstr='#2e2e2e',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+			border-radius: 8px;
+			margin-right: 20px;
+
+			img{
+				width: 40px;
+				float: left;
+				margin-right: 10px;
+
+			}
+			h4{
+				color:#fff;
+
+			}
+			span{
+				color:#fff;
+				font-size: 14px;
+			}
+
+		}
+		}
+		h1{
+			font-size: 42px;
+			color:#fff;
+			padding-bottom: 30px;
+
+		}
+	}
+	//Check out our official Smart APPS section ends here
+//Operate Our Websites CSS starts here!!!!!!!!!!!
+	.op_site{
+		background: #fff;
+		border-radius: 5px 5px 0px 0px;
+		border: 2px solid #EBEBEB;
+		padding: 0px 80px;
+		padding-left: 150px;
+		.sgst_btn{
+			text-align: center;
+			.button{
+				padding: 40px 70px;
+				font-size: 20px;
+				font-weight: 600;
+				text-transform: uppercase;
+				border-radius: 40px;
+				-webkit-box-shadow: 0px 6px 141px -21px rgba(0,0,0,0.27);
+				-moz-box-shadow: 0px 6px 141px -21px rgba(0,0,0,0.27);
+				box-shadow: 0px 6px 141px -21px rgba(0,0,0,0.27);
+				margin-bottom: 50px;
+				margin-top: 50px;
+			}
+		}
+		.padder-right{
+			padding-right:50px;
+		}
+		.active{
+			color:@is_primary !important;
+		}
+		h2{
+			text-align: center;
+			margin-top: 50px;
+			margin-bottom: 50px;
+		}
+
+		div.panel { display:none; }
+		div.panel.active { display:block; }
+		.faq-btn1,.faq-btn2,.faq-btn3,.faq-btn4,.faq-btn5,.faq-btn6,.faq-btn7,.faq-btn8,.faq-btn9,.faq-btn10{
+			//toggle plus sign buttons
+			width: 100%;
+			position: relative;
+			display: block;
+			padding-right: 100px;
+			border-bottom: 2px solid @txt_grey;
+			padding-bottom: 20px;
+			cursor: pointer;
+			h6{
+				font-weight: bold !important;
+			}
+
+			.tgl-btn{
+				position: absolute;
+				top: 0;
+				right: 0;
+				i{
+					font-size: 20px;
+				}
+			}
+		}
+		#ans1,#ans2,#ans3,#ans4,#ans5,#ans6,#ans7,#ans8,#ans9,#ans10{//answer bolocks for toogles
+			-webkit-box-shadow: 0px 6px 84px -42px rgba(0,0,0,1);
+			-moz-box-shadow: 0px 6px 84px -42px rgba(0,0,0,1);
+			box-shadow: 0px 6px 84px -42px rgba(0,0,0,1);
+			padding: 20px;
+			background: #fff;
+			margin-bottom: 20px;
+		}
+	}
+}
+//Operate Our Websites CSS ends here!!!!!!!!!!!
+//footer CSS starts here!!!!!!!!!!!!!
+.foot{
+	width: 100%;
+	background: #fff;
+	padding-bottom: 60px;
+	.foot-in{
+		width: 85%;
+		margin: 0 auto;
+		i{
+			font-size: 25px;
+			margin-top: 15px;
+			margin-right: 5px;
+		}
+		img{
+			height: 50px
+		}
+		sub{
+			font-weight: bold;
+		}
+		.is-active{
+			color:@is_primary;
+				a{
+				color:@is_primary;
+
+			}
+		}
+		ul, h5{
+			padding-top: 30px;
+			list-style:inherit;
+			font-weight: bold;
+			a{
+				color:#111;
+				font-size: 14px;
+				font-weight: bold;
+			}
+
+		}
+	}
+}
+//footer CSS ends here!!!!!!!!!!!!!
+//Responsive CSS starts from here
+
+@media screen and (max-width: 1088px){
+	.navbar #menuToggle{
+		position: absolute;
+		right: 10px !important;
+		top: 0;
+
+	}
+	.bdge1{
+		margin-right:80px;
+	}
+	.tabs{
+		display:inline-block;
+		box-shadow: none;
+		float: right;
+		position: absolute;
+		top: 0px;
+		right: 0px;
+	}
+}
+@media screen and (max-width: 768px){
+
+	.tag-section,.tag-section2 {
+	    padding: 20px;
+	}
+	.navbar-end, .navbar-menu{
+		padding-right: 0px;
+		margin-right: 0px;
+		float: none;
+		position:relative;
+	}
+
+	.src-box {
+		padding: 10px !important;
+		input[type="text"]{
+			font-size: 14px;
+		}
+		.dlt{
+			right: 10px;
+			top: 10px;
+			font-size: 18px;
+		}
+	}
+	.hero{
+		padding-left: 20px !important;
+		padding: 20px;
+		padding-top: 20px !important;
+		h1 {
+		    font-size: 30px !important;
+		    color: #fff;
+		    padding-bottom: 10px !important;
+		}
+	.dnld-btn{
+		display: block !important;
+		.abtn, .gbtn{
+			margin-bottom: 15px !important;
+			width: 100% !important;
+			display: block;
+			width: 240px;
+			padding: 7px 15px;
+			text-align: center;
+			img{
+				width: 40px;
+				float: left;
+				margin-right: 10px;
+
+			}
+			h4{
+				color:#fff;
+
+			}
+			span{
+				color:#fff;
+				font-size: 14px;
+			}
+
+		}
+	  }
+	}
+	.op_site{
+		padding-left: 15px !important;
+		padding-right: 15px !important;
+
+		.padder-right{
+			padding-right:15px !important;
+		}
+		.faq-btn1,.faq-btn2,.faq-btn3,.faq-btn4,.faq-btn5,.faq-btn6,.faq-btn7,.faq-btn8,.faq-btn9,.faq-btn10{
+			padding-right: 25px !important;
+		}
+		.tgl-btn{
+			right:10px !important;
+		}
+		.sgst_btn{
+			text-align: center;
+			font-size:12px !important;
+		.button{
+			font-size:12px !important;
+			padding: 20px 0px !important;
+			width: 100%;
+			margin-top: 10px !important;
+			}
+		}
+	}
+	.foot{
+		.foot-in{
+			text-align: center;
+			ul{
+				padding-top: 0px;
+				margin-top: 0px;
+				list-style: none;
+			}
+			h5{
+				padding-top: 0px;
+			}
+		}
+	}
+	.navbar-brand{
+		display: inline-block;
+		float: left;
+		img{
+			height: 100%;
+			width: 100px;
+		}
+	}
+	.navbar>.container{
+		display: block;
+		position: relative;
+
+	}
+	.navbar #menuToggle{
+		position: absolute;
+		right: 0px !important;
+		top: 0;
+		padding: 10px;
+	}
+	.bdge1{
+		margin-right: 65px;
+	}
+	.tabs{
+		display:inline-block;
+		box-shadow: none;
+		float: right;
+		a{
+			padding: 0px;
+		}
+	}
+	#menu{
+		width: auto !important;
+		padding-top: 50px !important;
+		li{
+			text-align: right !important;
+		}
+	}
+}
