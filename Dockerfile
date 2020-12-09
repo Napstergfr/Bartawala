@@ -4,7 +4,7 @@ FROM klovercloud/node:13-slim
 
 RUN useradd -ms /bin/bash klovercloud
 
-WORKDIR /home/klovercloud
+WORKDIR /home/klovercloud/data
 
 COPY . .
 
