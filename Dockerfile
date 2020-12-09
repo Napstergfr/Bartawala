@@ -6,9 +6,6 @@ RUN useradd -ms /bin/bash klovercloud
 
 WORKDIR /home/klovercloud
 
-COPY package*.json ./
-
-RUN npm install
 COPY . .
 
 
@@ -18,6 +15,5 @@ EXPOSE 8081
 
 
 USER klovercloud
-CMD [ "npm", "start" ]
 
 
